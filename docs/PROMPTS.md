@@ -1,6 +1,6 @@
-ï»¿# Registro de trabajo con inteligencia artificial â€” turnoLibre
+# Registro de trabajo con inteligencia artificial — turnoLibre
 
-## 1. PropÃ³sito
+## 1. Propósito
 
 Este documento registra el uso de herramientas de inteligencia artificial durante el desarrollo de turnoLibre. Su objetivo es mantener evidencia del proceso de trabajo, las decisiones tomadas, los errores detectados y las correcciones realizadas.
 
@@ -8,71 +8,80 @@ Se deben registrar hechos reales. No inventar resultados, errores, pruebas ni co
 
 ## 2. Herramientas utilizadas
 
-- Claude: asistencia para analizar documentaciÃ³n, proponer soluciones y apoyar el desarrollo desde su pÃ¡gina web.
+- Claude: asistencia para analizar documentación, proponer soluciones y apoyar el desarrollo desde su página web.
 - ChatGPT: apoyo para organizar tareas, revisar propuestas, explicar conceptos y documentar el proceso.
-- Visual Studio Code: ediciÃ³n y revisiÃ³n de los archivos del proyecto.
+- Visual Studio Code: edición y revisión de los archivos del proyecto.
 - Git: control de versiones y seguimiento de los cambios.
 
 ## 3. Registro de actividades
 
 Para cada actividad relevante, completar los siguientes datos:
 
-### Actividad [nÃºmero]
+### Actividad [número]
 
 - Fecha:
 - Herramienta de IA:
 - Objetivo:
 - Contexto o archivos proporcionados:
-- InstrucciÃ³n o prompt utilizado:
+- Instrucción o prompt utilizado:
 - Resultado obtenido:
-- RevisiÃ³n realizada:
+- Revisión realizada:
 - Errores o limitaciones detectados:
 - Correcciones aplicadas:
-- VerificaciÃ³n posterior:
-- DecisiÃ³n final: aceptado, modificado o rechazado.
+- Verificación posterior:
+- Decisión final: aceptado, modificado o rechazado.
 - Evidencia disponible: captura, archivo, salida de terminal o commit.
 
 ## 4. Registro inicial
 
-### Actividad 1 â€” PreparaciÃ³n del repositorio y documentaciÃ³n
+### Actividad 1 — Preparación del repositorio y documentación
 
 - Fecha: 21 de octubre de 2026.
 - Herramientas: ChatGPT, Visual Studio Code, PowerShell y Git.
-- Objetivo: preparar la base documental y el control de versiones antes de crear la aplicaciÃ³n.
-- Trabajo realizado: se inicializÃ³ Git, se creÃ³ .gitignore y se registraron documentos e imÃ¡genes de marca.
+- Objetivo: preparar la base documental y el control de versiones antes de crear la aplicación.
+- Trabajo realizado: se inicializó Git, se creó .gitignore y se registraron documentos e imágenes de marca.
 - Resultado verificable: commit local 2c37269, con el mensaje "docs: establish turnoLibre project foundation".
-- VerificaciÃ³n: git status --short no devolviÃ³ resultados y git ls-files enumerÃ³ 18 archivos.
+- Verificación: git status --short no devolvió resultados y git ls-files enumeró 18 archivos.
 - Errores detectados: no se registraron errores que impidieran completar esta actividad.
-- Observaciones: Git mostrÃ³ advertencias sobre finales de lÃ­nea LF y CRLF en Windows. No se comprobÃ³ que estas advertencias hayan causado problemas.
-- DecisiÃ³n: se conservÃ³ el primer commit local.
+- Observaciones: Git mostró advertencias sobre finales de línea LF y CRLF en Windows. No se comprobó que estas advertencias hayan causado problemas.
+- Decisión: se conservó el primer commit local.
 - Evidencia: salida de los comandos git init, git commit, git status --short y git ls-files compartida durante el trabajo.
 
-### Actividad 2 â€” CreaciÃ³n de la memoria de trabajo
+### Actividad 2 — Creación de la memoria de trabajo
 
 - Fecha: 21 de octubre de 2026.
 - Herramienta: ChatGPT.
-- Objetivo: crear un resumen persistente del contexto, el alcance, las tecnologÃ­as y las reglas de trabajo.
-- Archivo: memory.md, en la raÃ­z del proyecto.
-- Resultado verificable: el archivo se creÃ³ y su contenido se comprobÃ³ con Get-Content -Encoding UTF8 .\memory.md.
-- Errores detectados: no se informÃ³ ningÃºn error durante la creaciÃ³n.
-- VerificaciÃ³n: la salida de PowerShell mostrÃ³ el contenido completo del archivo.
-- DecisiÃ³n: memoria creada; queda disponible para revisiÃ³n y actualizaciÃ³n conforme avance el proyecto.
+- Objetivo: crear un resumen persistente del contexto, el alcance, las tecnologías y las reglas de trabajo.
+- Archivo: memory.md, en la raíz del proyecto.
+- Resultado verificable: el archivo se creó y su contenido se comprobó con Get-Content -Encoding UTF8 .\memory.md.
+- Errores detectados: no se informó ningún error durante la creación.
+- Verificación: la salida de PowerShell mostró el contenido completo del archivo.
+- Decisión: memoria creada; queda disponible para revisión y actualización conforme avance el proyecto.
 
+
+### Actividad 3 — Procedimientos reutilizables y matriz de IA
+
+- Fecha: 21 de octubre de 2026.
+- Herramienta de IA: ChatGPT.
+- Objetivo: preparar procedimientos reutilizables para especificar, clarificar y verificar tareas, y documentar el uso de IA en el TFI.
+- Archivos creados: `procedimientos/spec.md`, `procedimientos/clarificar.md`, `procedimientos/verificar.md`, `procedimientos/verificar-criterios.md` y `docs/MATRIZ-IA.md`.
+- Resultado verificable: se ejecutaron comandos de creación y se mostró el contenido de los cuatro procedimientos y de la matriz en PowerShell.
+- Limitaciones: la revisión integral de la documentación y la incorporación de evidencias académicas adicionales siguen pendientes.
+- Decisión: conservar los archivos para su revisión y actualización.
 ## 5. Criterios de registro
 
-- Guardar el prompt completo cuando sea relevante para explicar una decisiÃ³n o resultado.
+- Guardar el prompt completo cuando sea relevante para explicar una decisión o resultado.
 - Diferenciar las propuestas de la IA de las decisiones tomadas por el responsable del proyecto.
-- Conservar los errores reales y explicar su resoluciÃ³n.
-- Indicar quÃ© pruebas se ejecutaron y cuÃ¡les quedan pendientes.
+- Conservar los errores reales y explicar su resolución.
+- Indicar qué pruebas se ejecutaron y cuáles quedan pendientes.
 - Relacionar los cambios importantes con sus archivos y commits cuando corresponda.
-- No incluir contraseÃ±as, claves API, datos personales innecesarios ni secretos.
+- No incluir contraseñas, claves API, datos personales innecesarios ni secretos.
 - Actualizar este documento durante el desarrollo, no solamente al finalizar.
 
 ## 6. Pendientes
 
 - Registrar las instrucciones y resultados de las siguientes actividades.
-- Documentar la preparaciÃ³n de los procedimientos de especificaciÃ³n, aclaraciÃ³n y verificaciÃ³n.
-- Registrar los prompts de implementaciÃ³n y las revisiones de cÃ³digo.
+- Documentar la preparación de los procedimientos de especificación, aclaración y verificación.
+- Registrar los prompts de implementación y las revisiones de código.
 - Incorporar evidencias reales de pruebas, errores y correcciones.
-- Utilizar los registros como material de apoyo para el informe acadÃ©mico y la defensa del TFI.
-
+- Utilizar los registros como material de apoyo para el informe académico y la defensa del TFI.
