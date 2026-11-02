@@ -2,37 +2,59 @@
 
 ## 1. Propósito
 
-Identificar cómo se utiliza la inteligencia artificial durante el TFI, qué decisiones quedan a cargo del responsable del proyecto y qué evidencias permiten comprobar el trabajo realizado.
+Registrar cómo se utiliza la inteligencia artificial durante el desarrollo del TFI, qué decisiones toma el responsable del proyecto y qué evidencias permiten comprobar las actividades realizadas.
 
-La matriz se actualizará durante el desarrollo. No se considerará una propuesta de la IA como una decisión aprobada ni una prueba sugerida como una prueba ejecutada.
+La matriz distingue las propuestas de la IA de las decisiones aceptadas por el responsable. También diferencia las pruebas sugeridas de aquellas que efectivamente se ejecutaron.
 
 ## 2. Matriz de actividades
 
 | Actividad | Uso de IA | Intervención y revisión humana | Evidencia disponible | Estado |
 |---|---|---|---|---|
-| Preparación de la documentación inicial y del repositorio | Asistencia para organizar documentos y preparar el control de versiones | Se ejecutaron comandos y se revisó el resultado informado por Git | Commit local `2c37269`; registro en `docs/PROMPTS.md` | Realizado; revisión posterior pendiente |
-| Creación de la memoria de trabajo | Asistencia para resumir el contexto, las reglas y el alcance del proyecto | Se comprobó el contenido de `memory.md` con PowerShell | Archivo `memory.md`; commit local `5a591a2`; registro en `docs/PROMPTS.md` | Realizado |
-| Creación de procedimientos reutilizables | Asistencia para redactar instrucciones de especificación, aclaración y verificación | Se ejecutaron comandos de creación y se inspeccionaron las salidas de los archivos | `procedimientos/spec.md`, `procedimientos/clarificar.md`, `procedimientos/verificar.md` y `procedimientos/verificar-criterios.md` | Archivos creados; revisión integral pendiente |
-| Organización de la lista de tareas | Asistencia para reorganizar las secciones de `docs/08-TAREAS.md` | Se ejecutaron comandos, se detectaron reemplazos que no coincidían y se revisó la salida posterior | `docs/08-TAREAS.md`; salidas de PowerShell de la sesión | En revisión |
-| Implementación de la aplicación | Todavía no iniciada | Se deberán revisar requisitos, código, seguridad y pruebas antes de aceptar cambios | Pendiente | Pendiente |
-| Pruebas y publicación | Todavía no realizadas | Se deberán ejecutar y documentar las pruebas reales y verificar la publicación | Pendiente | Pendiente |
+| Preparación de la documentación y del repositorio | Asistencia para organizar documentos y preparar el control de versiones | Se ejecutaron comandos y se revisaron los resultados de Git | Commit local `2c37269`; registro en `docs/PROMPTS.md` | Realizado |
+| Creación de la memoria de trabajo | Asistencia para resumir el contexto, las reglas y el alcance del proyecto | Se comprobó el contenido de `memory.md` | Archivo `memory.md`; commit local `5a591a2` | Realizado |
+| Creación de procedimientos reutilizables | Asistencia para redactar instrucciones de especificación, aclaración y verificación | Se ejecutaron comandos de creación y se inspeccionaron los archivos | Carpeta `procedimientos/` | Realizado; revisión integral pendiente |
+| Organización de las tareas | Asistencia para reorganizar y adaptar la planificación al alcance real de la aplicación | Se revisaron las tareas y se actualizaron los estados según las evidencias disponibles | `docs/08-TAREAS.md`; salidas de PowerShell | Realizado; seguimiento pendiente |
+| Desarrollo de la aplicación | Asistencia de IA para implementar y revisar componentes y funcionalidades | Se integraron los archivos en la carpeta principal y se probaron las funciones principales | Código en `src/`, recursos en `public/`, configuración y conexión con Turso | Implementación principal realizada; ajustes pendientes |
+| Configuración de la base de datos | Asistencia para implementar la conexión, las consultas y las operaciones de reservas | Se comprobó el funcionamiento de la aplicación con la base de datos | `src/lib/db.ts` y `src/app/api/reservas/route.ts` | Realizado; revisión de integridad pendiente |
+| Migración de la aplicación | Asistencia para trasladar la aplicación desde `app-temporal` a la carpeta principal | Se copiaron los archivos, se comprobó su presencia y se ejecutó la aplicación desde la raíz. Se conservó una copia de respaldo fuera del repositorio | Carpetas `src/`, `public/`, `scripts/` y configuración de la raíz; carpeta externa `turnolibre-resguardos` | Realizado |
+| Pruebas de funcionamiento | Asistencia para interpretar resultados y orientar las verificaciones | Se ejecutaron pruebas de compilación, reservas, cancelaciones y liberación de horarios | Resultado de `npm.cmd run build` y pruebas locales de la aplicación | Parcialmente realizado |
+| Revisión de errores y ajustes | Asistencia para analizar problemas detectados durante las pruebas | Se identificaron inconvenientes en la impresión del comprobante y en una consulta de disponibilidad | Resultados observados durante las pruebas locales | Pendiente de resolución |
+| Publicación | Asistencia prevista para configurar y verificar el despliegue | Todavía no se cuenta con evidencia de una publicación verificada | Pendiente | Pendiente |
 
-## 3. Criterios de evaluación
+## 3. Decisiones tomadas durante el desarrollo
 
-- La IA puede proponer textos, estructuras, explicaciones y alternativas.
+- Se eligió Next.js, React, TypeScript y Tailwind CSS para desarrollar la interfaz.
+- Se utilizó Turso con LibSQL para almacenar las reservas.
+- Se adaptó la aplicación para que los clientes puedan reservar sin crear una cuenta.
+- Se incorporó la cancelación mediante un código de reserva y un dato de contacto.
+- Se decidió conservar el historial de reservas canceladas y liberar sus horarios.
+- Se dejó fuera del alcance de esta versión la administración de salones, las cuentas de usuarios y otras funciones previstas inicialmente.
+- Se trasladó la aplicación a la carpeta principal del repositorio y se conservó la versión anterior como respaldo.
+
+Estas decisiones fueron revisadas y aceptadas durante el desarrollo del proyecto.
+
+## 4. Criterios de evaluación
+
+- La IA puede proponer textos, estructuras, explicaciones y soluciones técnicas.
 - El responsable del proyecto revisa los resultados y decide qué aceptar, modificar o rechazar.
 - Los comandos se consideran ejecutados únicamente cuando existe una salida u otra evidencia que lo respalde.
 - Los archivos creados no se consideran automáticamente correctos por el solo hecho de existir.
-- Las pruebas, errores, correcciones y resultados se registran tal como ocurrieron.
+- Las pruebas, los errores, las correcciones y los resultados se registran tal como ocurrieron.
 - No se incorporan credenciales, claves, contraseñas ni datos personales innecesarios.
+- Las funcionalidades pendientes no se presentan como implementadas.
 
-## 4. Evidencias que faltan incorporar
+## 5. Evidencias pendientes de incorporar
 
-- Capturas o exportaciones que exija la consigna del TFI.
-- Registro más detallado de los prompts utilizados para crear los procedimientos.
+- Capturas de la aplicación en funcionamiento.
+- Evidencias de creación y cancelación de reservas.
+- Capturas o registros de las pruebas de disponibilidad.
+- Registro más detallado de los prompts utilizados durante la implementación.
 - Revisión completa de la documentación en Visual Studio Code.
-- Evidencias de implementación, pruebas y publicación cuando esas etapas se realicen.
+- Evidencias de pruebas en distintos dispositivos.
+- Evidencias de publicación, si se realiza el despliegue.
 
-## 5. Actualización
+## 6. Actualización
 
-Actualizar esta matriz cuando se complete una actividad importante. Coordinar los registros con `docs/PROMPTS.md` y conservar las referencias a archivos, comandos y commits disponibles.
+Esta matriz debe mantenerse coordinada con `docs/PROMPTS.md` y `docs/08-TAREAS.md`.
+
+Cada actividad se marcará como realizada cuando exista evidencia suficiente. Los problemas detectados y las funciones pendientes deben quedar registrados para que el informe y la defensa representen el estado real del proyecto.

@@ -1,74 +1,99 @@
-# IDENTIDAD-MARCA — ¿Cómo nos vemos y cómo hablamos?
+# Identidad de marca - turnoLibre
 
-## Esencia
+## 1. Esencia de la marca
 
 | Elemento | Definición |
 |---|---|
-| **Nombre** | turnoLibre (se escribe todo junto, con la «L» de Libre en mayúscula) |
+| **Nombre** | turnoLibre. Se escribe junto, con la «L» de Libre en mayúscula. |
 | **Eslogan** | Tu turno, sin vueltas. |
-| **Misión** | Simplificar la reserva de turnos en peluquerías y barberías para que los clientes ahorren tiempo y los profesionales ordenen su agenda. |
-| **Visión** | Ser la forma habitual en que las peluquerías independientes de Argentina gestionan sus turnos. |
+| **Misión** | Facilitar la consulta de disponibilidad y la reserva de turnos en peluquerías y barberías mediante una aplicación web sencilla. |
+| **Visión** | Ofrecer una herramienta digital accesible que simplifique la reserva de turnos en pequeños establecimientos de peluquería y barbería. |
 | **Personalidad** | Cálida, cercana, clara, prolija y confiable. |
-| **Público** | Clientes de 18 a 45 años que reservan desde el celular y dueños o encargados de peluquerías y barberías pequeñas. |
+| **Público** | Personas que necesitan reservar turnos y establecimientos de peluquería y barbería que ofrecen servicios mediante reservas. |
 
-**Significado del nombre:** *turno* es la reserva de un horario y *libre* alude tanto al
-horario disponible como a la libertad de agendar sin llamadas ni esperas. La «L» mayúscula
-separa visualmente las dos palabras (turno + Libre) y se mantiene en toda comunicación.
+### Significado del nombre
 
-## Logo
+La palabra «turno» representa la reserva de un horario. «Libre» hace referencia a la disponibilidad y a la posibilidad de elegir un horario sin depender de llamadas o mensajes.
 
-El logo combina un reloj (disponibilidad), unas tijeras cruzadas (peluquería) y un
-calendario (gestión de turnos) dentro de un ícono de esquinas redondeadas.
+La «L» mayúscula permite distinguir visualmente las dos partes del nombre y se mantiene en la identidad de la marca.
 
-![Logo turnoLibre](../marca/logo-turnolibre.png)
+## 2. Identidad visual
 
-| Versión | Archivo | Uso |
-|---|---|---|
-| Ícono con nombre (principal) | `marca/logo-turnolibre.png` | Portada, encabezado, redes sociales |
-| Imagen original completa | `marca/logo-turnolibre-original.png` | Archivo de respaldo |
-| Maqueta con paleta | `marca/logo-turnolibre-mockup.png` | Presentaciones y vista previa de marca |
-| Paleta | `marca/paleta-turnolibre.png` | Referencia rápida de colores |
+La identidad visual de turnoLibre utiliza elementos gráficos relacionados con la reserva de turnos y los servicios de peluquería y barbería.
 
-**Reglas de uso:** respetar el espacio libre alrededor del ícono, no deformarlo, no
-cambiar sus colores y no apoyarlo sobre fondos que reduzcan el contraste.
+### Archivos de marca
 
-## Paleta de colores
+Los recursos gráficos se encuentran en la carpeta `marca` del proyecto:
 
-| Nombre | HEX | Uso |
-|---|---|---|
-| Terracota | `#D2694A` | Color principal: fondo del ícono, encabezados, acentos |
-| Marrón profundo | `#A73F22` | Botones principales, texto «Libre», enlaces, estados activos |
-| Dorado suave | `#E8C581` | Detalles, bordes, texto «turno», íconos secundarios |
-| Blanco cálido | `#FFFFFF` | Tarjetas, texto sobre colores oscuros, ícono del reloj |
-| Crema | `#FFF3E7` | Fondo general de las pantallas |
-| Texto oscuro | `#3B1F17` | Texto de lectura sobre fondos claros |
-
-> **Accesibilidad:** el texto blanco sobre `#A73F22` tiene buen contraste y se usa en los
-> botones. El texto blanco sobre `#D2694A` se reserva para títulos grandes o en negrita.
-
-## Tipografías
-
-| Uso | Tipografía | Motivo |
-|---|---|---|
-| Títulos y botones | **Montserrat** (SemiBold / Bold) | Geométrica y moderna; coincide con el estilo del texto del logo |
-| Texto general | **Open Sans** (Regular / SemiBold) | Muy legible en pantallas pequeñas |
-
-```css
-:root {
-  --font-title: "Montserrat", sans-serif;
-  --font-body: "Open Sans", sans-serif;
-}
-```
-
-## Tono de voz
-
-- **Cercano y rioplatense:** usamos voseo ("Sacá tu turno", "Elegí tu horario").
-- **Claro y breve:** frases cortas, una idea por mensaje.
-- **Amable, sin exagerar:** sin jerga técnica ni signos de exclamación en exceso.
-- **Positivo ante los errores:** explicamos cómo resolver el problema.
-
-| En lugar de… | Decimos… |
+| Archivo | Uso actual |
 |---|---|
-| "Error 409: conflicto de recurso" | "Ese horario ya fue reservado. Probá con otro." |
-| "Reserva exitosa" | "¡Listo! Tu turno quedó confirmado." |
-| "Debe iniciar sesión" | "Ingresá a tu cuenta para continuar." |
+| `marca/logo1.png` | Logo principal utilizado en el encabezado y en el carrusel. |
+| `marca/logo2.png` | Segunda versión del logo, utilizada en el carrusel. |
+| `marca/logo-banner.png` | Banner de la marca utilizado en el carrusel. |
+| `marca/paleta-turnolibre.png` | Referencia visual de la paleta de colores. |
+
+### Reglas de uso
+
+- Mantener las proporciones originales de los logos.
+- No deformar ni modificar los colores de los archivos.
+- Respetar el espacio libre alrededor de cada imagen.
+- Evitar fondos que dificulten su identificación y lectura.
+- Utilizar los archivos originales almacenados en la carpeta `marca`.
+
+## 3. Paleta de colores
+
+La identidad utiliza una combinación de tonos cálidos para transmitir cercanía y facilitar la identificación visual de la aplicación.
+
+| Nombre | Código HEX | Uso previsto |
+|---|---|---|
+| Terracota | `#D2694A` | Color principal, encabezados y acentos. |
+| Marrón profundo | `#A73F22` | Botones principales, enlaces y estados activos. |
+| Dorado suave | `#E8C581` | Detalles, bordes e íconos secundarios. |
+| Blanco | `#FFFFFF` | Tarjetas y elementos sobre fondos oscuros. |
+| Crema | `#FFF3E7` | Fondo general de las pantallas. |
+| Texto oscuro | `#3B1F17` | Texto principal sobre fondos claros. |
+
+Los colores forman parte de la identidad visual definida para el proyecto. Su uso debe mantener una buena legibilidad y un contraste adecuado entre el texto y el fondo.
+
+## 4. Tipografía
+
+La tipografía implementada actualmente en la aplicación es:
+
+| Uso | Tipografía | Estado |
+|---|---|---|
+| Texto general, títulos y botones | Arial, Helvetica, sans-serif | Implementada |
+
+La declaración se encuentra en `src/app/globals.css`.
+
+Montserrat y Open Sans fueron consideradas como alternativas para el diseño, pero no están cargadas actualmente en la aplicación.
+
+## 5. Tono de voz
+
+La comunicación de turnoLibre busca ser sencilla, cercana y directa.
+
+- **Cercano y rioplatense:** utiliza expresiones habituales y voseo, como «Sacá tu turno» y «Elegí tu horario».
+- **Claro y breve:** presenta mensajes cortos y fáciles de comprender.
+- **Amable:** mantiene un trato cordial, sin exageraciones.
+- **Orientado a la solución:** cuando ocurre un problema, explica qué puede hacer el usuario para continuar.
+
+### Ejemplos de comunicación
+
+| En lugar de... | Utilizar... |
+|---|---|
+| «Error 409: conflicto de recurso». | «Ese horario ya fue reservado. Probá con otro». |
+| «Reserva exitosa». | «¡Listo! Tu turno quedó confirmado». |
+| «Operación no válida». | «No pudimos completar la solicitud. Revisá los datos e intentá nuevamente». |
+| «Horario no disponible». | «Ese horario ya no está disponible. Elegí otro». |
+
+## 6. Aplicación de la identidad en el proyecto
+
+La identidad de turnoLibre se refleja en:
+
+- El nombre y el eslogan de la aplicación.
+- Los logos y el banner utilizados en la página principal.
+- La paleta de colores aplicada a los componentes de la interfaz.
+- La tipografía definida en los estilos generales.
+- Los mensajes y textos dirigidos a los usuarios.
+- El diseño adaptable a celulares, tablets y computadoras.
+
+La identidad visual acompaña el objetivo principal del proyecto: ofrecer una experiencia sencilla para consultar disponibilidad y reservar turnos sin vueltas.

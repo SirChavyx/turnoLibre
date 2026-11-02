@@ -1,74 +1,113 @@
-# 08-TAREAS ó øEn quÈ orden lo hacemos?
+# 08-TAREAS ‚Äî Plan de trabajo y cierre de turnoLibre
 
-> Tildar cada casilla (`- [x]`) al terminar la tarea. Trabajar una etapa por vez.
+> Objetivo: finalizar una versi√≥n funcional y documentada de Turnolibre para la entrega del TFI. Marcar las tareas √∫nicamente cuando exista evidencia de su realizaci√≥n.
 
-## Etapa 0 ó EspecificaciÛn
+## Etapa 0 ‚Äî Planificaci√≥n e identidad
 
-- [x] Definir la idea y el nombre del emprendimiento
-- [x] DiseÒar el logo y la paleta de colores
-- [x] Redactar `IDENTIDAD-MARCA.md` y los archivos de `docs/`
-- [x] Crear `AGENTS.md`
+- [x] Definir la idea y el nombre del proyecto.
+- [x] Dise√±ar el logo y la paleta de colores.
+- [x] Redactar la identidad de marca y la documentaci√≥n inicial.
+- [x] Crear `AGENTS.md`.
+- [x] Definir los requerimientos funcionales y no funcionales.
+- [x] Crear `memory.md`.
 
-## Trabajo con IA y trazabilidad
-- [x] Crear `memory.md` para mantener la continuidad del proyecto
-- [x] Crear `docs/PROMPTS.md` para registrar el uso real de IA
-- [x] Crear procedimientos reutilizables para especificar, clarificar y verificar tareas
-- [ ] Crear la matriz de uso de IA y completar sus evidencias reales
+## Etapa 1 ‚Äî Documentaci√≥n y uso de IA
 
-## RevisiÛn y entrega de la documentaciÛn
+- [x] Crear `docs/PROMPTS.md`.
+- [x] Crear `docs/MATRIZ-IA.md`.
+- [x] Crear procedimientos reutilizables para especificar, clarificar y verificar tareas.
+- [x] Corregir la codificaci√≥n de `PROMPTS.md` y `08-TAREAS.md` a UTF-8.
+- [x] Crear el README del proyecto.
+- [ ] Actualizar la matriz de IA con las actividades reales de implementaci√≥n y pruebas.
+- [ ] Completar el registro de prompts y revisiones de c√≥digo.
+- [ ] Revisar los documentos principales en Visual Studio Code.
+- [ ] Preparar la documentaci√≥n para la Bit√°cora Digital.
 
-- [ ] Revisar los archivos con la vista previa de VS Code (Ctrl + Shift + V)
-- [ ] Subir la carpeta a la Bit·cora Digital
+## Etapa 2 ‚Äî Configuraci√≥n y entorno
 
+- [x] Crear el proyecto con Next.js y TypeScript.
+- [x] Configurar Tailwind CSS.
+- [x] Incorporar los recursos gr√°ficos de la marca.
+- [x] Configurar `.gitignore`.
+- [x] Verificar la exclusi√≥n de archivos sensibles y dependencias.
+- [x] Configurar la conexi√≥n con Turso.
+- [x] Integrar la aplicaci√≥n en la carpeta principal del repositorio.
+- [x] Actualizar `AGENTS.md`.
+- [x] Documentar la instalaci√≥n y ejecuci√≥n en `README.md`.
+- [ ] Crear `.env.example` sin credenciales reales.
+- [ ] Revisar el estado final del repositorio.
+- [ ] Verificar la existencia y el estado del repositorio remoto en GitHub.
 
+## Etapa 3 ‚Äî Base de datos
 
+- [x] Crear y conectar la base de datos Turso.
+- [x] Implementar la conexi√≥n mediante LibSQL.
+- [x] Crear e inicializar la tabla `reservas`.
+- [x] Incorporar los campos necesarios para registrar los turnos.
+- [x] Implementar c√≥digos de reserva √∫nicos.
+- [x] Incorporar controles para evitar horarios activos duplicados.
+- [x] Implementar consultas de disponibilidad.
+- [ ] Completar la revisi√≥n de integridad de los datos.
 
-## Etapa 1 ó ConfiguraciÛn del proyecto
+## Etapa 4 ‚Äî Funcionalidades principales
 
-- [ ] Crear el repositorio en GitHub
-- [ ] Crear el proyecto Next.js con TypeScript y Tailwind CSS
-- [ ] Configurar variables de color y tipografÌas de la marca
-- [ ] Crear `.env.example` y agregar `.env` al `.gitignore`
-- [ ] Conectar el repositorio con Vercel
+- [x] Mostrar los salones disponibles.
+- [x] Mostrar los servicios y profesionales.
+- [x] Permitir seleccionar servicio, profesional, fecha y horario.
+- [x] Consultar horarios ocupados.
+- [x] Registrar una reserva.
+- [x] Generar un c√≥digo de confirmaci√≥n.
+- [x] Mostrar el comprobante de reserva.
+- [x] Cancelar una reserva mediante c√≥digo y dato de contacto.
+- [x] Liberar el horario despu√©s de una cancelaci√≥n.
+- [ ] Resolver la impresi√≥n del comprobante.
+- [ ] Verificar el comportamiento de la disponibilidad en distintos escenarios.
 
-## Etapa 2 ó Base de datos
+## Etapa 5 ‚Äî Pruebas y seguridad
 
-- [ ] Crear la base PostgreSQL
-- [ ] Definir el esquema en `prisma/schema.prisma`
-- [ ] Ejecutar la primera migraciÛn
-- [ ] Crear datos de prueba ficticios (`seed.ts`)
+- [x] Ejecutar la aplicaci√≥n localmente.
+- [x] Comprobar la compilaci√≥n con `npm.cmd run build`.
+- [x] Probar la creaci√≥n de reservas.
+- [x] Probar la cancelaci√≥n desde la interfaz.
+- [x] Comprobar la liberaci√≥n de horarios cancelados.
+- [ ] Repetir las pruebas de disponibilidad.
+- [ ] Comprobar que no se puedan duplicar reservas simult√°neas.
+- [ ] Revisar las validaciones de las API.
+- [ ] Revisar la protecci√≥n de las credenciales.
+- [ ] Probar la aplicaci√≥n en computadora y celular.
 
-## Etapa 3 ó Cuentas de usuario
+## Etapa 6 ‚Äî Ajuste del alcance original
 
-- [ ] Pantalla de registro (RF01)
-- [ ] Pantalla de ingreso (RF01)
-- [ ] ProtecciÛn de rutas del panel seg˙n el rol
+Las siguientes funciones no forman parte de la versi√≥n que se entregar√°. Se dejan documentadas como decisiones de alcance y posibles mejoras futuras.
 
-## Etapa 4 ó Reserva de turnos (clientes)
+- [ ] Incorporar cuentas de clientes y propietarios.
+- [ ] Incorporar panel de administraci√≥n de salones.
+- [ ] Permitir reprogramar turnos.
+- [ ] Incorporar administraci√≥n de servicios y profesionales.
+- [ ] Incorporar agenda diaria y semanal.
+- [ ] Incorporar recordatorios autom√°ticos.
+- [ ] Incorporar bloqueo de d√≠as y horarios.
+- [ ] Incorporar rese√±as y estad√≠sticas.
 
-- [ ] Listado y b˙squeda de peluquerÌas (RF02)
-- [ ] Perfil de peluquerÌa (RF03)
-- [ ] C·lculo de horarios disponibles (RF04, RF06)
-- [ ] Formulario de reserva paso a paso (RF04, RF05)
-- [ ] Pantalla ´Mis turnosª con reprogramar y cancelar (RF07)
+**Decisi√≥n de alcance:** los clientes pueden reservar y cancelar sin crear una cuenta. La cancelaci√≥n se realiza mediante el c√≥digo de reserva y el dato de contacto. La autenticaci√≥n y las funciones administrativas quedan fuera de esta versi√≥n.
 
-## Etapa 5 ó Panel de la peluquerÌa
+## Etapa 7 ‚Äî Entrega
 
-- [ ] Alta y ediciÛn del perfil del local (RF08)
-- [ ] AdministraciÛn de servicios (RF09)
-- [ ] AdministraciÛn de profesionales y horarios (RF10)
-- [ ] Agenda diaria y semanal (RF11)
-- [ ] Cambio de estado de los turnos (RF12)
+- [ ] Revisar el README y la documentaci√≥n t√©cnica.
+- [ ] Completar `MATRIZ-IA.md` y `PROMPTS.md`.
+- [ ] Reunir capturas y evidencias de funcionamiento.
+- [ ] Comprobar que no haya credenciales en los archivos versionados.
+- [ ] Revisar y confirmar la versi√≥n definitiva del repositorio.
+- [ ] Publicar la aplicaci√≥n en Vercel, si est√° dentro de los requisitos de entrega.
+- [ ] Verificar el funcionamiento de la versi√≥n publicada.
+- [ ] Preparar la presentaci√≥n y la defensa del TFI.
 
-## Etapa 6 ó Mejoras
+---
 
-- [ ] Recordatorio por correo 24 horas antes (RF13)
-- [ ] Bloqueo de dÌas y horarios (RF14)
-- [ ] ReseÒas de clientes (RF15)
+## Alcance de la versi√≥n final
 
-## Etapa 7 ó Calidad y publicaciÛn
+Turnolibre permite consultar salones, servicios, profesionales y horarios disponibles; realizar reservas y cancelarlas mediante un c√≥digo de confirmaci√≥n y un dato de contacto.
 
-- [ ] Aplicar el SEO de `09-SEO.md`
-- [ ] Revisar la seguridad seg˙n `10-SEGURIDAD.md`
-- [ ] Probar la aplicaciÛn en celular y en computadora
-- [ ] Publicar la versiÛn final en Vercel
+La versi√≥n se desarrolla con Next.js, React, TypeScript, Tailwind CSS y Turso. No incluye cuentas de usuario ni panel de administraci√≥n.
+
+Las funciones pendientes se documentan como mejoras futuras y no se presentan como funcionalidades implementadas.

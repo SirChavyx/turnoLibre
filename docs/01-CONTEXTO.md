@@ -1,56 +1,105 @@
-# 01-CONTEXTO — ¿Por qué existe y para quién es?
+# 01 - Contexto del proyecto
 
-## Problema
+## 1. Problema
 
-Muchas peluquerías y barberías pequeñas administran sus turnos por WhatsApp, llamadas o
-una libreta de papel. Esto genera:
+Muchas peluquerías y barberías pequeñas organizan sus turnos mediante mensajes de WhatsApp, llamadas telefónicas o anotaciones en papel.
 
-- Turnos superpuestos o anotados en el horario equivocado.
-- Clientes que no saben qué horarios hay libres y deben esperar una respuesta.
-- Ausencias sin aviso que dejan un hueco en la agenda.
-- Tiempo del dueño perdido contestando mensajes en lugar de atender.
+Esta forma de trabajo puede generar algunas dificultades:
 
-## Objetivo
+- Superposición de turnos.
+- Errores al registrar fechas y horarios.
+- Demoras para responder consultas sobre disponibilidad.
+- Dificultades para organizar las reservas.
+- Pérdida de tiempo en la atención de mensajes.
 
-Construir una aplicación web donde el cliente vea los horarios disponibles y reserve un
-turno en menos de un minuto, y donde cada peluquería gestione su agenda sin mensajes
-cruzados.
+Frente a esta situación, se plantea el desarrollo de una aplicación web que facilite la consulta de horarios y la reserva de turnos.
 
-**Metas medibles:**
+## 2. Objetivo general
 
-- Reservar un turno en 4 pasos o menos.
-- Evitar el 100 % de las reservas superpuestas para un mismo profesional.
-- Que la aplicación sea cómoda de usar desde un celular.
+Desarrollar una aplicación web que permita consultar la disponibilidad de peluquerías y barberías, seleccionar un servicio, un profesional y un horario, y registrar una reserva de manera sencilla.
 
-## Público
+La aplicación también debe permitir cancelar una reserva mediante un código de confirmación y un dato de contacto.
 
-| Perfil | Descripción | Necesidad principal |
+## 3. Objetivos específicos
+
+- Facilitar la consulta de servicios y profesionales.
+- Permitir la selección de fechas y horarios disponibles.
+- Registrar las reservas en una base de datos.
+- Evitar la duplicación de reservas para un mismo profesional, fecha y horario.
+- Generar un código de confirmación para cada reserva.
+- Permitir la cancelación de turnos bajo las condiciones establecidas.
+- Ofrecer una interfaz adaptable a computadoras, tablets y celulares.
+
+## 4. Público destinatario
+
+El proyecto está orientado principalmente a dos grupos:
+
+| Perfil | Descripción | Necesidad |
 |---|---|---|
-| Cliente | Persona de 18 a 45 años que usa el celular a diario | Reservar rápido y no esperar respuesta |
-| Dueño o encargado | Gestiona una peluquería o barbería pequeña | Ordenar la agenda y reducir ausencias |
-| Profesional | Peluquero/a o barbero/a del local | Ver sus turnos del día de un vistazo |
+| Cliente | Persona que necesita reservar un turno en una peluquería o barbería. | Consultar horarios y reservar sin depender de una respuesta por mensaje. |
+| Peluquerías y barberías | Establecimientos que ofrecen servicios mediante turnos. | Contar con una herramienta digital que facilite la organización de las reservas. |
 
-## Productos o servicios
+Los profesionales también se consideran parte del contexto de uso, ya que sus horarios de atención determinan la disponibilidad de los turnos.
 
-| Servicio de la plataforma | Descripción | Precio |
-|---|---|---|
-| Reserva online para clientes | Elegir peluquería, servicio, profesional y horario | $ 0 |
-| Panel de gestión para peluquerías | Agenda, servicios, profesionales y horarios de atención | $ 0 |
-| Recordatorio de turno | Aviso por correo electrónico antes del turno | $ 0 |
+## 5. Propuesta de valor
 
-> Los precios quedan en $ 0 como marcador hasta definir el modelo comercial.
+Turnolibre busca simplificar el proceso de reserva de turnos mediante una aplicación web accesible desde el navegador.
 
-## Propuesta de valor
+Su propuesta consiste en reunir en un mismo lugar la consulta de servicios, la selección de profesionales, la disponibilidad horaria y la confirmación de las reservas.
 
-Una agenda online simple, hecha para peluquerías pequeñas, que le ahorra tiempo al
-cliente y orden al profesional, sin instalar nada y sin costos de entrada.
+El eslogan del proyecto es:
 
-## No incluye (por ahora)
+**«Tu turno, sin vueltas».**
 
-- Pagos online ni cobro de señas.
-- Aplicación móvil nativa (se usa desde el navegador).
-- Envío de recordatorios por WhatsApp (solo correo electrónico).
-- Venta de productos o tienda online.
+## 6. Alcance de la versión desarrollada
+
+La versión actual es un prototipo académico funcional que permite:
+
+- Visualizar salones de peluquería y barbería de ejemplo.
+- Buscar y filtrar establecimientos.
+- Consultar servicios y profesionales.
+- Seleccionar fecha y horario.
+- Consultar la disponibilidad.
+- Registrar una reserva.
+- Obtener un código de confirmación.
+- Cancelar una reserva mediante el código y el teléfono de contacto.
+
+Los datos de salones, servicios y precios son ficticios y se utilizan para demostrar el funcionamiento de la aplicación.
+
+## 7. Funcionalidades fuera del alcance
+
+Por limitaciones de tiempo y para mantener un alcance de desarrollo posible de completar, no se incorporaron las siguientes funciones:
+
+- Registro e inicio de sesión de clientes.
+- Cuentas para propietarios y profesionales.
+- Panel de administración.
+- Gestión de servicios y profesionales.
+- Administración de agendas y horarios de atención.
+- Reprogramación de turnos.
+- Recordatorios automáticos por correo electrónico o WhatsApp.
+- Pagos online y cobro de señas.
+- Venta de productos.
 - Programa de puntos, cupones o descuentos.
-- Gestión de sueldos, stock o facturación.
-- Soporte para otras industrias (centros de estética, consultorios, etc.).
+- Gestión de sueldos, stock y facturación.
+- Aplicación móvil nativa.
+- Adaptación a otros rubros comerciales.
+
+Estas funciones pueden considerarse para futuras versiones, pero no forman parte del producto desarrollado.
+
+## 8. Resultados esperados
+
+Se espera que la aplicación facilite el proceso de reserva y permita demostrar el funcionamiento de un sistema básico de gestión de turnos.
+
+Los principales aspectos que se buscan comprobar son:
+
+- Que el usuario pueda completar una reserva mediante un proceso sencillo.
+- Que la disponibilidad se consulte desde la base de datos.
+- Que no se permitan reservas duplicadas para un mismo profesional, fecha y horario.
+- Que una reserva pueda cancelarse respetando las condiciones establecidas.
+- Que el horario cancelado vuelva a estar disponible.
+
+## 9. Contexto académico
+
+Turnolibre se desarrolla como Trabajo Final Integrador de la Tecnicatura Superior en Desarrollo de Software.
+
+El proyecto permite aplicar conocimientos de desarrollo web, programación, bases de datos, diseño de interfaces, control de versiones y utilización de herramientas de inteligencia artificial como apoyo al proceso de desarrollo.
